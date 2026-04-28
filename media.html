@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Media Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!--ChatGPT help to add icons-->
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Mary's Media Page</div>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+<!--ChatGPT help with link names-->
+  <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="contactme.html">Contact Me</a></li>
+</ul>
+</nav>
+
+
+<!--ChatGPT help removed button code for new navigation and helped with video aria-label for accessibility-->
+<section class="media-section">
+  <h2>Exploring Art in Museums</h2>
+ <!--Video Source from Pexels by Antoni Shkraba Studio image title People Roaming a Museum-->
+  <video id="museumVideo" poster="media/posterimage.jpg"
+         aria-label="Visitors enjoying a relaxing day at a museum">
+    <source src="media/pexelsmuseumantoni.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <button id="videoBtn" class="neu-icon" aria-label="Play video">
+    <i class="ph-fill ph-play"></i>
+  </button>
+
+  <p class="credit">Visitors enjoying a relaxing day at a museum.</p>
+</section>
+
+
+  <!--ChatGPT help removed button code for new navigation-->
+
+<div class="typer media-section">
+  Art promotes healing with a sense of peace and tranquility.
+</div>
+
+<section class="media-section">
+  <h2>How art soothes the soul</h2>
+
+  <!--Music Source by Dmitrii Kolesnikov song title The Mountain from Pixabay-->
+
+<!--ChatGPT assistance added aria-label for audio accessibility-->
+<audio id="museumAudio"
+       aria-label="Relaxing instrumental music from Pixabay titled The Mountain">
+  <source src="media/pixabaymusicthemountainKolesnikov.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!--ChatGPT help to fix buttons-->
+<!--ChatGPT add aria-label for text-->
+
+<button id="audioBtn" class="neu-icon" aria-label="play audio">
+  <i class="ph-fill ph-play"></i>
+</button>
+
+<p class="credit">Music from Pixabay</p>
+</section>
+<!--Original image from National Gallery Creative Commons turned into short video with use of Meta AI-->
+<!--original painting by Mary Cassatt titled Children Playing on the Beach-->
+<!--ChatGPT help with adding video tag-->
+
+<section class="card-gallery">
+
+  <article class="card">
+    <div class="img-wrap">
+      <!--ChatGPT assistance with image poster adding area-label for visually impaired-->
+     <video controls muted poster="media/cassatt-poster.jpg"
+       aria-label="AI-generated video inspired by Mary Cassatt's Children Playing on the Beach">
+        <source src="media/cassatt-children-beach.mp4" type="video/mp4">
+         <!--Video created using Meta AI and prompts for two children playing and laughing in the sand-->
+      </video>
+    </div>
+    <div class="content-float">
+      <h3>Children Playing on the Beach by Mary Cassatt 1884
+</h3>
+      <p>AI-generated Mary Cassatt painting brought to life video · 2026</p>
+    </div>
+  </article>
+
+
+
+
+
+  <article class="card">
+    <div class="img-wrap">
+      <!--ChatGPT assistance with image poster adding area-label for visually impaired-->
+      <video controls muted poster="media/vangoughposter.jpg"
+       aria-label="AI-generated video inspired by Vincent Van Gogh's Farmhouse in Provence">
+        <source src="media/vangough.mp4" type="video/mp4">
+        <!--Video created using Meta AI and prompts for man to slowly walk while back faces viewer-->
+      </video>
+    </div>
+    <div class="content-float">
+      <h3>Farmhouse in Provence by Vincent Van Gogh 1888</h3>
+      <p>AI-generated Vincent Van Gogh painting brought to life video  · 2026</p>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="img-wrap">
+       <!--ChatGPT assistance with image poster adding area-label for visually impaired-->
+      <video controls muted poster="media/gonzalesnannychild-poster.jpg"
+       aria-label="AI-generated video inspired by Eva Gonzales's Nanny and Child">
+        <source src="media/gonzalesnannychild.mp4" type="video/mp4">
+         <!--Video created using Meta AI and prompts for woman to pick up umbrella slowly and slightly twirl umbrella-->
+      </video>
+    </div>
+    <div class="content-float">
+      <h3>Nanny and Child by Eva Gonzales</h3>
+         <p>AI-generated Eva Gonzales painting brought to life video  · 2026</p>
+    </div>
+  </article>
+
+    <article class="card">
+    <div class="img-wrap">
+      <!--ChatGPT assistance with image poster adding area-label for visually impaired-->
+     <video controls muted poster="media/renoirguitar-poster.jpg"
+       aria-label="AI-generated video inspired by Auguste Renoir's Young Spanish Woman with a Guitar">
+        <source src="media/renoirguitar.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="content-float">
+       <h3>Young Spanish Woman with a Guitar by Auguste Renoir 1898</h3>
+        <p>AI-generated Auguste Renoir painting brought to life video  · 2026</p>
+     <!--Video created using Meta AI and prompts for woman to play guitar and slightly move head keeping face sideways-->
+    </div>
+  </article>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Mary Mazujian</p>
+</footer>
+
+<!-- ChatGPT assistance setting up JavaScript code -->
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
+
+

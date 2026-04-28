@@ -1,0 +1,229 @@
+/* ChatGPT assistance with issues with video and duplicate code */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ChatGPT help: general page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* ChatGPT help: navbar layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #d9c7bb;
+}
+
+/* ChatGPT help: navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ChatGPT help: center media sections */
+.media-section {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.media-section h2 {
+  margin-bottom: 15px;
+}
+
+/* ChatGPT fix: center museum video */
+#museumVideo {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ChatGPT help: neumorphism-style buttons */
+.neu-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #e0e5ec;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  box-shadow: -5px -5px 12px #ffffff, 5px 5px 12px #a3b1c6;
+}
+
+/* ChatGPT help: icon styling inside buttons */
+.neu-icon i {
+  font-size: 32px;
+  color: #c29545;
+}
+
+/* ChatGPT help: card container for video */
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/*ChatGPT helped with image wrap removed original extra is further down in CSS code*/
+
+/* ChatGPT help: heart icon overlay */
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* ChatGPT help: text under video */
+.content-float {
+  margin-top: 10px;
+}
+
+/*ChatGPT assistance with fixing extra hamburger in header*/
+/* =========================
+   ChatGPT fix: Mobile Navbar Toggle
+   ========================= */
+
+/* Hide checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Make navbar a positioning container */
+.navbar {
+  position: relative;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #d9c7bb;
+    padding: 10px;
+    width: 180px;
+  }
+
+  /* Show menu when checkbox is checked */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}
+
+/*ChatGPT help align text under museum video*/
+.credit {
+  text-align: center;
+}
+
+/*ChatGPT help with typewriter text not moving*/
+/* ChatGPT fix: center typewriter text */
+/* ChatGPT fix: center typewriter text */
+
+
+/* ChatGPT fix: centered typewriter animation */
+/* ChatGPT fix: centered + responsive typewriter animation */
+.typer {
+  display: block;
+  width: fit-content;
+  max-width: 90%;
+  margin: 20px auto;
+  text-align: center;
+
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+
+  overflow: hidden;
+  white-space: normal;
+  border-right: 3px solid black;
+
+  /*ChatGPT help for slower typewriter text movement*/
+animation: typing 10s steps(30, end), blink 1.2s step-end infinite;
+}
+
+/* typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* blinking cursor */
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/*ChatGPT help with card wrap*/
+
+/* ChatGPT help: card gallery layout */
+.card-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ChatGPT help: make all card videos same shape */
+.img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ChatGPT help: stack cards on small screens */
+@media (max-width: 768px) {
+  .card-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+/*ChatGPT help with reduced motion for videos and typewriter*/
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
