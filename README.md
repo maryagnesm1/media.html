@@ -10,3 +10,4 @@ The original artworks include:
 •	Children Playing on the Beach by Mary Cassatt  
 •	Nanny and Child by Eva Gonzales  
 •	Young Spanish Woman with a Guitar by Auguste Renoir (1898)
+
