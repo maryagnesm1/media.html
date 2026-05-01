@@ -227,3 +227,29 @@ animation: typing 10s steps(30, end), blink 1.2s step-end infinite;
     scroll-behavior: auto !important;
   }
 }
+
+
+/*ChatGPT removed extra info panel*/
+
+.info-panel h3 {
+  margin-bottom: 0.4rem;
+}
+
+.info-panel .year {
+  color: #c29545;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+
+/*added footer color since adding to GitHub*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #d9c7bb;
+  color: black;
+  margin-top: 60px;
+
+  width: 100%;          /* ADD THIS */
+  display: block;       /* ADD THIS */
+}
