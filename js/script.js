@@ -1,59 +1,33 @@
+//ChatGPT help with JS for all pages working with GitHub
 // ChatGPT assistance: JavaScript to control video and audio buttons
-// This allows BOTH video and music to play at the same time
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  // Museum video element
   const video = document.getElementById("museumVideo");
-
-  // Audio (Pixabay music - The Mountain by Dmitrii Kolesnikov)
   const audio = document.getElementById("museumAudio");
-
-  // Buttons for controls
   const videoBtn = document.getElementById("videoBtn");
   const audioBtn = document.getElementById("audioBtn");
 
-  // =========================
-  // VIDEO BUTTON (Museum)
-  // =========================
-  videoBtn.addEventListener("click", () => {
+  if (video && videoBtn) {
+    videoBtn.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        videoBtn.innerHTML = '<i class="ph-fill ph-pause"></i>';
+      } else {
+        video.pause();
+        videoBtn.innerHTML = '<i class="ph-fill ph-play"></i>';
+      }
+    });
+  }
 
-    // If video is paused → play it
-    if (video.paused) {
-      video.play();
-
-      // Change icon to pause
-      videoBtn.innerHTML = '<i class="ph-fill ph-pause"></i>';
-
-    } else {
-      // If video is playing → pause it
-      video.pause();
-
-      // Change icon back to play
-      videoBtn.innerHTML = '<i class="ph-fill ph-play"></i>';
-    }
-  });
-
-  // =========================
-  // AUDIO BUTTON (Music)
-  // =========================
-  audioBtn.addEventListener("click", () => {
-
-    // If audio is paused → play it
-    if (audio.paused) {
-      audio.play();
-
-      // Change icon to pause
-      audioBtn.innerHTML = '<i class="ph-fill ph-pause"></i>';
-
-    } else {
-      // If audio is playing → pause it
-      audio.pause();
-
-      // Change icon back to play
-      audioBtn.innerHTML = '<i class="ph-fill ph-play"></i>';
-    }
-  });
-
+  if (audio && audioBtn) {
+    audioBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        audioBtn.innerHTML = '<i class="ph-fill ph-pause"></i>';
+      } else {
+        audio.pause();
+        audioBtn.innerHTML = '<i class="ph-fill ph-play"></i>';
+      }
+    });
+  }
 });
-
