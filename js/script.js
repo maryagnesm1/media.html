@@ -1,8 +1,7 @@
 //ChatGPT help for JS buttons not working
 // ChatGPT assistance: JavaScript to control museum video and music buttons
 // Allows both video and audio to play independently
-
-dodocument.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
   // VIDEO
   const video = document.getElementById("museumVideo");
