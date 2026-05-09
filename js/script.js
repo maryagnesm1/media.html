@@ -1,33 +1,71 @@
-//ChatGPT help with JS for all pages working with GitHub
-// ChatGPT assistance: JavaScript to control video and audio buttons
+//ChatGPT help for JS buttons not working
+// ChatGPT assistance: JavaScript to control museum video and music buttons
+// Allows both video and audio to play independently
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // VIDEO
   const video = document.getElementById("museumVideo");
-  const audio = document.getElementById("museumAudio");
   const videoBtn = document.getElementById("videoBtn");
+
+  // AUDIO
+  const audio = document.getElementById("museumAudio");
   const audioBtn = document.getElementById("audioBtn");
 
+  // =========================
+  // VIDEO BUTTON
+  // =========================
+
   if (video && videoBtn) {
+
     videoBtn.addEventListener("click", () => {
+
       if (video.paused) {
+
         video.play();
-        videoBtn.innerHTML = '<i class="ph-fill ph-pause"></i>';
+
+        // Change button to pause icon
+        videoBtn.innerHTML = "❚❚";
+
       } else {
+
         video.pause();
-        videoBtn.innerHTML = '<i class="ph-fill ph-play"></i>';
+
+        // Change button back to play icon
+        videoBtn.innerHTML = "▶";
+
       }
+
     });
+
   }
 
+  // =========================
+  // AUDIO BUTTON
+  // =========================
+
   if (audio && audioBtn) {
+
     audioBtn.addEventListener("click", () => {
+
       if (audio.paused) {
+
         audio.play();
-        audioBtn.innerHTML = '<i class="ph-fill ph-pause"></i>';
+
+        // Change button to pause icon
+        audioBtn.innerHTML = "❚❚";
+
       } else {
+
         audio.pause();
-        audioBtn.innerHTML = '<i class="ph-fill ph-play"></i>';
+
+        // Change button back to play icon
+        audioBtn.innerHTML = "▶";
+
       }
+
     });
+
   }
+
 });
