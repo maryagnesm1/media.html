@@ -2,6 +2,7 @@
 // ChatGPT assistance: JavaScript to control museum video and music buttons
 // Allows both video and audio to play independently
 document.addEventListener("DOMContentLoaded", () => {
+
   // VIDEO
   const video = document.getElementById("museumVideo");
   const videoBtn = document.getElementById("videoBtn");
